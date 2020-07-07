@@ -1,0 +1,70 @@
+{
+  "name": "vue-datepicker-scroll-english",
+  "version": "2.9.3",
+  "description": "This is an iOS style scrolling date picker",
+  "main": "lib/vue-datepicker-scroll.umd.min.js",
+  "author": "Elliotts Su, Jason Ulwelling",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "lib": "vue-cli-service build --target lib --name vue-datepicker-scroll --dest lib packages/index.js"
+  },
+  "dependencies": {
+    "core-js": "^3.3.2",
+    "dayjs": "^1.8.17",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/skwerlzu/vue-datepicker-scroll-english.git"
+  },
+  "keywords": [
+    "vue",
+    "datepicker",
+    "date",
+    "picker"
+  ],
+  "bugs": {
+    "url": "https://github.com/skwerlzu/vue-datepicker-scroll-english.git/issues"
+  },
+  "style": "lib/vue-datepicker-scroll.css",
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
