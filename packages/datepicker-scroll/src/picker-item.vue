@@ -149,17 +149,17 @@ export default {
       if (date.length > 5) {
         time = dayjs(date)
           .locale("zh-cn")
-          .format("YYYY年MM月DD日 dddd");
+          .format("YYYY-MM-DD dddd");
 
         const today = dayjs()
           .locale("zh-cn")
-          .format("YYYY年MM月DD日 dddd");
+          .format("YYYY-MM-DD dddd");
         const todayWeek = dayjs()
           .locale("zh-cn")
           .format("dddd");
 
         time = time === today ? time.replace(todayWeek, "今天") : time; // 把今天替换掉对应的周
-        time = time.replace("星期", "周"); // 把星期换成周
+        time = time.replace("week", "week"); // 把星期换成周
       }
 
       return time;

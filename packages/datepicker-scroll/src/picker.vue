@@ -12,14 +12,14 @@
             class="picker-cancel"
             v-text="cancelText"
             @click="handleCancel"
-          >取消</a>
+          >Cancel</a>
           <span v-text="titleText" v-if="titleText" class="picker-title"></span>
           <a
             href="javascript:void(0);"
             class="picker-confirm"
             v-text="confirmText"
             @click="handleConfirm"
-          >确定</a>
+          >Ok</a>
         </div>
         <!-- 选择区域 -->
         <div class="picker-group" :style="{ height: visibleCount * liHeight + 'px' }">
@@ -56,7 +56,7 @@ export default {
   },
   watch: {
     visible(v) {
-      // 初始时数据为空，在显示时再计算位置
+      // 初始时数据为空，在显示时再计算位置 Show picker as bottom sheet based on screen height
       if (v && this.liHeight == 0) {
         this.getDisplayHeight();
       }
@@ -64,9 +64,9 @@ export default {
   },
   props: {
     visible: { type: Boolean, default: false }, // 显示或隐藏 默认：隐藏
-    cancelText: { type: String, default: "取消" }, // 取消按钮文本 默认：取消
-    confirmText: { type: String, default: "确认" }, // 确定按钮文本 默认：确认
-    titleText: { type: String, default: "请选择" }, // 标题文本 默认：请选择
+    cancelText: { type: String, default: "Cancel" }, // 取消按钮文本 默认：取消
+    confirmText: { type: String, default: "Ok" }, // 确定按钮文本 默认：确认
+    titleText: { type: String, default: "Choose Date" }, // 标题文本 默认：请选择
     startDate: String, // 开始日期 默认：今天的前10天 格式：2019-11-11
     endDate: String, // 结束日期 默认：今天的后10天 格式：2019-11-12 结束时间一定要大于等于开始时间
     visibleCount: { type: Number, default: 5 }, // 显示的个数 默认：5
